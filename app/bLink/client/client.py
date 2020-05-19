@@ -25,7 +25,7 @@ def loop():
     num=0
     while True:
         if num%500==0:
-            os.system('ntpdate %s'%msg.FG['ntpserver'])
+            os.system('ntpdate %s'%msg.FG['ntpserver']) 
         num+=1
         time.sleep(1)
 def run():
