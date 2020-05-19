@@ -1,0 +1,643 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+
+<style>
+    body, ul, li {
+        /* position: relative; */
+        margin: 0;
+        padding: 0;
+        /*font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;*/
+        list-style: none;
+    }
+
+    header {
+        position: fixed;
+        z-index: 9;
+        width: 100%;
+        height: 60px;
+        font-size: 22px;
+        color: #333;
+        font-weight: bold;
+        text-align: left;
+        line-height: 60px;
+        border-bottom: 2px solid #b7b7b7;
+        padding-left: 20px;
+        /*background: #77d677;*/
+    }
+
+    footer {
+        width: 100%;
+        position: fixed;
+        padding-left: 20px;
+        z-index: 9;
+        line-height: 45px;
+        height: 45px;
+        bottom: 0;
+        font-size: 16px;
+        color: #000000;
+        border-top: 2px solid #b7b7b7;
+        /*background: #77d677;*/
+    }
+
+    section {
+        padding: 60px 0px 45px 0px;
+    }
+
+    nav {
+        /*background: #93f393;*/
+        color: #333;
+        border-right: 2px solid #b7b7b7;
+    }
+
+    nav li {
+        padding: 10px 20px;
+        margin: 5px 0px;
+        cursor: pointer;
+        color: #000000;
+    }
+
+    nav li.active {
+        background: #2283ea;
+        color: #ffffff;
+        letter-spacing: 2px;
+        border: 0px;
+        margin-right: 2px;
+
+    }
+
+    article {
+        padding: 20px;
+        /*font-size: 24px;*/
+        text-align: center;
+        /*background: #d9ffd9;*/
+        height: 100%;
+    }
+
+    .atcss {
+        font-size: 22px;
+        font-weight: bold;
+        margin: 30px 0px 60px 0px;
+    }
+
+    /* default */
+    section.default nav {
+        position: absolute;
+        top: 60px;
+        bottom: 60px;
+        /* float: left;
+        height: 100%; */
+        width: 200px;
+    }
+
+    section.default nav li {
+        padding: 10px 20px;
+    }
+
+    section.default nav li.active {
+        background: #77d677;
+    }
+
+    section.default article {
+        padding-left: 220px;
+    }
+
+    /* flexModal */
+    section.flexModal {
+        display: flex;
+    }
+
+    section.flexModal nav {
+        width: 200px;
+    }
+
+    section.flexModal article {
+        flex: 1;
+    }
+
+    /* fixedLeft */
+    section.fixedLeft nav {
+        position: fixed;
+        top: 60px;
+        bottom: 45px;
+    }
+
+    section.fixedLeft article {
+        margin-left: 200px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .active a {
+        color: #FFFFFF;
+    }
+
+    .box {
+        margin: 10px 5%;
+        /*padding: 0 0 0 5px;*/
+        height: 35px;
+        line-height: 35px;
+        /*border: 1px solid #000;*/
+        width: 90%;
+        box-sizing: border-box;
+    }
+
+    .box label {
+        width: 125px;
+        text-align: right;
+        /*background-color: red;*/
+        float: left;
+        margin-left: 30%;
+        height: 30px;
+    }
+
+    .box span {
+        margin-left: 5px;
+        float: left;
+    }
+
+    .box input {
+        width: 400px;
+        height: 30px;
+        float: left;
+        margin-left: 2%;
+        padding-left: 5px;
+        border-radius: 3px;
+        border: 1px solid #919191;
+    }
+
+    .boxselect{
+        width: 400px;
+        height: 30px;
+        float: left;
+        margin: 1px 1px 1px 2%;
+        padding-left: 5px;
+        border-radius: 3px;
+        border: 1px solid #919191;
+
+    }
+
+    .loginbtn {
+        width: 120px;
+        height: 35px;
+        background-color: #2283ea;
+        color: #ffffff;
+        border: 0px;
+        letter-spacing: 2px;
+        font-size: 16px;
+        border-radius: 5px;
+        margin-top: 40px;
+    }
+
+    .hidecontent {
+        display: none;
+    }
+    .restart{
+        background-color: #919191;
+    }
+    .titleheader {
+        /*text-align: center*/;
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin-bottom: 60px;
+        margin-left: 106px;
+    }
+
+    .logincss {
+    }
+
+    .logincss span {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+
+    .logincss input {
+        width: 300px;
+        height: 25px;
+        padding-left: 5px;
+        border-radius: 3px;
+        border: 1px solid #919191;
+    }
+
+    .logincss input :hover {
+        width: 300px;
+        height: 25px;
+        padding-left: 5px;
+        border-radius: 3px;
+        border: 1px solid #919191;
+    }
+
+    .loginbtn {
+	    width: 310px;
+	    height: 35px;
+	    background-color: #2283ea;
+	    color: #ffffff;
+	    border: 0px;
+	    letter-spacing: 2px;
+	    font-size: 16px;
+	    border-radius: 5px;
+	    margin-left: 66px;
+    }
+	#login{
+		position: absolute;
+		left:50%;
+		top:50%;
+		transform: translate(-50%,-50%);
+		overflow: hidden;
+	}
+</style>
+
+<script language="javascript">
+    function switchTag(tag, content) {
+//	alert(tag);
+//	alert(content);
+        for (var i = 1; i < 6; i++) {
+            if ("tag" + i == tag) {
+				index=i;
+                document.getElementById(tag).className = "active";
+            } else {
+                document.getElementById("tag" + i).className = "";
+            }
+            if ("content" + i == content) {
+                document.getElementById(content).className = "";
+            } else {
+                document.getElementById("content" + i).className = "hidecontent";
+            }
+        }
+		this.blur();
+    }
+</script>
+
+<body>
+    <div id="login">
+        <div class="titleheader">
+            <p>智能物联网控制器</p>
+        </div>
+        <div>
+            <div action="/login.cgi" class="logincss">
+                <span>登录名称</span><input type="" name="account" placeholder="请在此输入账号">
+                <br>
+                <br>
+                <br>
+                <span>登录密码</span><input type="password" name="password" placeholder="请在此输入密码">
+                <br>
+                <br>
+                <div style="color:red;margin-left: 63px" id="info_t"></div>
+                <br>
+                <button type="submit" class="loginbtn" name="login">登录</button>
+    
+            </div>
+        </div>
+    </div>
+    <div id="main" style="display:none">
+        <header>智能物联网控制器</header>
+        <section class="flexModal fixedLeft">
+            <nav>
+                <ul>
+                    <li></li>
+                    <li id="tag1" class="active"><a href="#" onclick="switchTag('tag1','content1');this.blur();" class="active"><span
+                            class="selectspan1">平台参数</span></a></li>
+                    <li id="tag2"><a href="#" onclick="switchTag('tag2','content2');this.blur();"><span>MQTT参数</span></a></li>
+                    <li id="tag3"><a href="#" onclick="switchTag('tag3','content3');this.blur();"><span>网络参数</span></a></li>
+                    <li id="tag4"><a href="#" onclick="switchTag('tag4','content4');this.blur();"><span>用户设置</span></a></li>
+                    <li id="tag5"><a href="#" onclick="switchTag('tag5','content5');this.blur();"><span>出厂设置</span></a></li>
+                </ul>
+            </nav>
+
+            <article>
+                <div id="content1">
+                    <div class="atcss">平台参数</div>
+
+                    <div class="box">
+                        <label>IP地址：</label><input type="text" name="" id="" value=""/>
+                    </div>
+                    <div class="box">
+                        <label>端口：</label><input type="text" name="" id="" value=""/>
+                    </div>
+                    <div class="box">
+                        <label>登录用户名：</label><input type="text" name="" id="" value=""/>
+                    </div>
+                    <div class="box">
+                        <label>登陆密码：</label><input type="text" name="" id="" value=""/>
+                    </div>
+                    <div class="box">
+                        <label>客户端ID：</label><input type="text" name="" id="" value=""/>
+                    </div>
+                    <div class="box">
+                        <label>产品ID：</label><input type="text" name="" id="" value=""/>
+                    </div>
+                    <div class="box">
+                        <label>设备ID：</label><input type="text" name="" id="" value=""/>
+                    </div>
+                    <div class="box">
+                        <label>心跳时间：</label><input type="text" name="" id="" value=""/><span>秒</span>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="loginbtn">提交</button>
+                    </div>
+                </div>
+
+                <div id="content2" class="hidecontent">
+                    <div class="atcss">MQTT参数</div>
+
+                    <div class="box">
+                        <label>订阅主题1：</label><input type="text" name="" id="" value=""/>
+                    </div>
+                    <div class="box">
+                        <label>订阅主题2：</label><input type="text" name="" id="" value=""/>
+                    </div>
+                    <div class="box">
+                        <label>订阅主题3：</label><input type="text" name="" id="" value=""/>
+                    </div>
+                    <div class="box">
+                        <label>订阅主题4：</label><input type="text" name="" id="" value=""/>
+                    </div>
+                    <div class="box">
+                        <label>发布主题1：</label><input type="text" name="" id="" value=""/>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="loginbtn">提交</button>
+                    </div>
+                </div>
+
+                <div id="content3" class="hidecontent">
+                    <div class="atcss">网络参数</div>
+
+                    <div class="box">
+                        <label>网络类型：</label>
+                        <select class="boxselect">
+                            <option value="eth0">网口1</option>
+                            <option value="eth1">网口2</option>
+                            <option value="eth2">4g</option>
+                            <option value="wlan0">Wifi</option>
+                        </select>
+                    </div>
+                    <div class="box">
+                        <label>IP地址：</label><input type="text" name="" id="" value=""/>
+                    </div>
+                    <div class="box">
+                        <label>子网掩码：</label><input type="text" name="" id="" value=""/>
+                    </div>
+                    <div class="box">
+                        <label>网关：</label><input type="text" name="" id="" value=""/>
+                    </div>
+                    <div class="box">
+                        <label>DNS：</label><input type="text" name="" id="" value=""/>
+                    </div>
+                    <div class="box">
+                        <label>MAC：</label><input type="text" name="" id="" value=""/>
+                    </div>
+                    <div class="box">
+                        <label>WIFI名称：</label><input type="text" name="" id="" value=""/>
+                    </div>
+                    <div class="box">
+                        <label>WIFI密码：</label><input type="password" name="" id="" value=""/>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="loginbtn">提交</button>
+                    </div>
+                </div>
+
+                <div id="content4" class="hidecontent">
+                    <div class="atcss">修改密码</div>
+
+                    <div class="box">
+                        <label>原密码：</label><input type="text" name="" id="" value=""/>
+                    </div>
+                    <div class="box">
+                        <label>新密码：</label><input type="text" name="" id="" value=""/>
+                    </div>
+                    <div class="box">
+                        <label>新密码验证：</label><input type="text" name="" id="" value=""/>
+                    </div>
+                    <div>
+                        <button type="submit" class="loginbtn" name="login">提交</button>
+                    </div>
+                </div>
+
+                <div id="content5" class="hidecontent">
+                    <div class="atcss">出厂设置</div>
+
+                    <div>
+                        <button type="submit" class="loginbtn">重启设备</button>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="loginbtn restart">恢复出厂设置</button>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+        <footer>成都古河云科技有限公司 - 智能物联网控制器<span style="float: right;padding-right: 40px"> POWERED BY GUHEYUN!</span></footer>
+    </div>
+<script>
+
+</script>
+</body>
+<script>
+	var index=parseInt(document.URL.split('=').pop())||1
+	//switchTag('tag'+index,'content'+index)
+    var array_to_json_array=function (array1,array2){
+        var rt=[]
+        array2.forEach(function(v2,i2,a2){
+            var rm={}
+            array1.forEach(function(v1,i1,a1){
+                rm[v1]=v2[i1]
+            })
+            rt.push(rm)
+        })
+        return rt
+    }
+	var xmlhttp;
+	function state_Change(callback)
+    {
+        return function(){
+            if (xmlhttp.readyState==4)
+                {
+                if (xmlhttp.status==200)
+                    {// 200 = "OK"
+                        callback(JSON.parse(xmlhttp.responseText))
+                    }
+                else
+                    {
+                    alert("Problem retrieving data:" + xmlhttp.statusText);
+                    }
+                }
+            }
+    }
+
+	function loadXMLDoc(url,callback)
+	{
+		xmlhttp=null;
+		if (window.XMLHttpRequest)
+		  {// code for Firefox, Opera, IE7, etc.
+		  xmlhttp=new XMLHttpRequest();
+		  }
+		else if (window.ActiveXObject)
+		  {// code for IE6, IE5
+		  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		  }
+		if (xmlhttp!=null)
+		  {
+		  xmlhttp.onreadystatechange=state_Change(callback);
+		  xmlhttp.open("GET",url,true);
+		  xmlhttp.send(null);
+		  }
+		else
+		  {
+		  alert("Your browser does not support XMLHTTP.");
+		  }
+	}
+    var oj=array_to_json_array(['path','title','name','type','value','disabled'],
+        [
+            [0,'IP地址：','netip','text','<!--#a-->'],
+            [0,'端口：','netport','text','<!--#b-->'],
+            [0,'登录用户名：','netusername','text','<!--#c-->'],
+            [0,'登录密码  ：','netpassword','text','<!--#d-->'],
+			[0,'客户端ID  ：','ClientID','text','<!--#e-->'],
+			[0,'产品ID    ：','productid','text','<!--#f-->'],
+			[0,'设备ID  ：','deviceid','text','<!--#g-->'],
+			[0,'心跳时间：','hearttime','text','<!--#h-->'],
+
+			[1,'系统配置  ：','TP_CONFIG','text','<!--#i-->'],
+			[1,'设备管理  ：','TP_MANAGE','text','<!--#j-->'],
+			[1,'任务管理  ：','TP_TASK','text','<!--#k-->'],
+			[1,'事件管理  ：','TP_EVENT','text','<!--#l-->'],
+            [1,'数据上传  ：','TP_PARAM_POST','text','<!--#l-->'],
+
+	        [2,"网络类型：",'localcom','select','<!--#q-->'], //WiredNetwork,wifi,4g
+	        [2,"IP地址：",'localip','text','<!--#r-->'],
+	        [2,"子网掩码：",'netmask','text','<!--#s-->'],
+	        [2,"网关：",'gateway','text','<!--#A-->'],
+            [2,"DNS：",'dns','text','<!--#u-->'],
+            [2,"ntp时间服务器 ","ntpserver",'text',''],
+			[2,"MAC：",'mac','text','<!--#v-->',true],
+	        [2,"WIFI名称：",'wifiName','text','<!--#w-->'],
+	        [2,"WIFI密码：",'wifiPassword','text','<!--#x-->'],
+
+	        [3,"原密码",'password','text','<!--#y-->'],
+            [3,"新密码：",'newpassword1','password','<!--#z-->'],
+            [3,"新密码验证：",'newpassword2','password','<!--#z-->'],
+        ],
+    )
+    var inputs=document.querySelector('#main').querySelectorAll('input,select')
+	inputs.forEach(function(v,i){
+        v.value="xx"
+        v.name=v.placeholder=oj[i].name;
+        v.title=oj[i].title
+        v.disabled=oj[i].disabled
+        oj[i].input=v
+	})
+	var labels=document.querySelector('#main').querySelectorAll('label')
+	labels.forEach(function(v,i){
+		if(oj[i]){
+			v.innerHTML=oj[i].title
+		}
+    })
+    var btnName=['login','savePf','saveMqtt','saveNet','saveUser','restart','recover','save']
+    function paramGet(index,v){
+        //console.log(btnName[index])
+        var names=oj.filter(v=>v.path==index-1)
+        var data={method:"get",names:names.map(v=>v.name).join(',')}
+        if(v){
+            for(key in v){
+                data[key]=v[key]
+            }
+        }
+        go(data,btnName[index],d=>{
+            console.log(btnName[index],data,d)
+            d.array.forEach((v1,i)=>{
+                if(names[i]){
+                    names[i].input.value=v1
+                }     
+            })
+        })
+    }
+    document.querySelector('select').onchange=function(){
+        paramGet(3,{name:this.value})
+    }
+    document.querySelectorAll("li").forEach((v,i)=>{
+        v.onclick=function(){
+            paramGet(i)
+        }
+    })
+	document.querySelectorAll('button').forEach(function(v,i){
+        v.name=btnName[i]
+		v.onclick=function() {
+            var inputs= Array.apply(null,v.parentNode.parentNode.querySelectorAll('input,select')
+			).filter(v=>v.disabled!=true)
+            inputs.push({name:"method",value:"save"})
+			if (v.innerHTML == "恢复出厂设置") {
+				if (confirm("是否恢复出厂设置")) {
+					go(inputs, v.name)
+				}
+			} else {
+				go(inputs, v.name)
+			}
+            
+		}
+	})
+    function go(v,method,callback){
+        var url='/'+method+'?'
+
+        if(Array.isArray(v)){
+            v.forEach(function(d){
+                url+=d.name+'='+d.value+'&'
+            })
+        }
+        else{
+            for(var key in v){
+                url+=key+'='+v[key]+'&'
+            }
+        }
+        if(method!="login"){
+            url+=('account='+document.querySelector('input[name="account"]').value+'&password='+document.querySelector('input[name="password"]').value+'&')
+        }
+        url=url.substring(0,url.length-1)
+	    //console.log(url)
+		loadXMLDoc(url,d=>{
+            //console.log(url,d)
+            if(d.statu==-1){
+                document.getElementById('info_t').innerHTML=d.msg
+                document.getElementById('login').style.display=""
+                document.getElementById('main').style.display="none"
+            }else if(method=="login"){
+                document.getElementById('info_t').innerHTML=""
+                document.getElementById('login').style.display="none"
+                document.getElementById('main').style.display=""
+                paramGet(1)
+            }
+            if(d.msg){
+                alert(d.msg)
+            }
+            if(callback){
+                callback(d)
+            }
+            
+        })
+        
+        // //location.href=url
+    }
+    function autotest(){
+        document.querySelector('[name="account"]').value="admin"
+        document.querySelector('[name="password"]').value="admin"
+        document.querySelectorAll('button')[0].click()
+        setTimeout(()=>{
+            document.querySelectorAll('li')[2].click()
+        },1500)
+        
+
+    }
+    autotest()
+</script>
+</html>

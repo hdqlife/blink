@@ -1,0 +1,151 @@
+{
+    "id": "deviceId",
+    "device_type": "",
+    "device_name": "",
+    "datetime": "2020-02-1012:00:00",
+    "class": "Device",
+    "enable": true,
+    "slaveid": 1,
+    "interval": 1,
+    "protocol": 5,
+    "interface": "Terminal",
+    "address": [
+        "192.168.1.142",
+        47808
+    ],
+    "children": [
+        "aca213cfac04/VI0",
+        "aca213cfac04/AI0",
+        "aca213cfac04/AO0",
+        "aca213cfac04/DO0",
+        "aca213cfac04/DI0",
+        "aca213cfac04/L0",
+        "aca213cfac04/0001",
+        "aca213cfac04/xxx",
+        "aca213cfac04/L1",
+        "aca213cfac04/L2"
+    ],
+    "interfaces": {
+        "485_1": {
+            "ip": "/dev/ttyO5",
+            "port": 115200,
+            "parity": "None",
+            "class": "Serial",
+            "stopbit": 1,
+            "databit": 8,
+            "interval": 1,
+            "enable": false
+        },
+        "485_2": {
+            "ip": "/dev/ttyO4",
+            "port": 115200,
+            "parity": "None",
+            "class": "Serial",
+            "stopbit": 1,
+            "databit": 8,
+            "interval": 1,
+            "enable": false
+        },
+        "485_3": {
+            "ip": "/dev/ttyO3",
+            "port": 115200,
+            "parity": "None",
+            "class": "Serial",
+            "stopbit": 1,
+            "databit": 8,
+            "interval": 1,
+            "enable": false
+        },
+        "485_4": {
+            "ip": "/dev/ttyO2",
+            "port": 115200,
+            "parity": "None",
+            "class": "Serial",
+            "stopbit": 1,
+            "databit": 8,
+            "interval": 1,
+            "enable": false
+        },
+        "can1": {
+            "bitrate": 125000,
+            "Id": "can1",
+            "class": "can",
+            "interval": 1,
+            "enable": false
+        },
+        "can2": {
+            "bitrate": 125000,
+            "Id": "can2",
+            "class": "can",
+            "interval": 1,
+            "enable": false
+        },
+        "can3": {
+            "bitrate": 125000,
+            "Id": "can3",
+            "class": "can",
+            "interval": 1,
+            "enable": false
+        },
+        "can4": {
+            "bitrate": 125000,
+            "Id": "can4",
+            "class": "can",
+            "interval": 1,
+            "enable": false
+        },
+        "net_eth0": {
+            "HWaddr": "0C:AE:7D:77:93:0E",
+            "addr": "192.168.1.150",
+            "Bcast": "192.168.1.255",
+            "Mask": "255.255.255.0",
+            "wifiName": "EANT-TECH-2-4",
+            "wifiPassword": "xykj20160315",
+            "interval": 1,
+            "class": "net",
+            "enable": true,
+            "ip": "0.0.0.0"
+        },
+        "net_eth1": {
+            "HWaddr": "0C:AE:7D:77:93:10",
+            "addr": "0.0.0.0",
+            "Bcast": "",
+            "Mask": "",
+            "wifiName": "EANT-TECH-2-4",
+            "wifiPassword": "xykj20160315",
+            "interval": 1,
+            "class": "net",
+            "enable": true,
+            "ip": "0.0.0.0"
+        },
+        "net_wlan0": {
+            "HWaddr": "AC:A2:13:CF:AC:04",
+            "addr": "0.0.0.0",
+            "Bcast": "",
+            "Mask": "",
+            "wifiName": "EANT-TECH-2-4",
+            "wifiPassword": "xykj20160315",
+            "interval": 1,
+            "class": "net",
+            "enable": true,
+            "ip": "0.0.0.0"
+        },
+        "net_lo": {
+            "HWaddr": "",
+            "addr": "127.0.0.1",
+            "Bcast": "",
+            "Mask": "255.0.0.0",
+            "wifiName": "EANT-TECH-2-4",
+            "wifiPassword": "xykj20160315",
+            "interval": 1,
+            "class": "net",
+            "enable": true,
+            "ip": "127.0.0.1"
+        },
+        "Terminal": {
+            "enable": true,
+            "interval": 1
+        }
+    },
+    "Id": "aca213cfac04"
+}

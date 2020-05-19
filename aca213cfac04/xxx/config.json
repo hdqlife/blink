@@ -1,0 +1,40 @@
+{
+    "id": "xxx",
+    "identifierid": "VI0",
+    "enable": true,
+    "alarm": "alarmhh",
+    "value": 100,
+    "state1": null,
+    "state2": null,
+    "state3": null,
+    "state4": null,
+    "Link": [
+        {
+            "deviceid": "aca213cfac04",
+            "identifierid": "VI1",
+            "value": 1
+        }
+    ],
+    "mode": 1,
+    "overvalue": 10,
+    "delay": 2,
+    "links": [
+        {
+            "deviceid": "xxx",
+            "id": "xxx",
+            "value": 0
+        }
+    ],
+    "Id": "xxx",
+    "class": "Event",
+    "children": [],
+    "_index": 7,
+    "state": [
+        null,
+        null,
+        null,
+        null
+    ],
+    "interface": "AI0",
+    "protocol": 5
+}

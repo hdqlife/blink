@@ -1,0 +1,2 @@
+tar -czvf test/tar/test.tar test/tar/a.txt test/tar/b.txt
+tar -xzvf test/tar/test.tar 
