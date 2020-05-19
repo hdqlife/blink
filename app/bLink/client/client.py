@@ -51,6 +51,5 @@ def run():
     Base.io.myloop()
 
 if __name__=="__main__":
-    print("hello world")
     run()
 
