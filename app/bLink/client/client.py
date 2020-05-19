@@ -35,9 +35,6 @@ def run():
     _thread.start_new_thread(bacrun,())
     _thread.start_new_thread(loop,())
     function.udpsendmsg(9988,updread)
-
-    function.updat
-
     _thread.start_new_thread(initHttp,())
     Base.io=MqttClient(
         #msg.FG['ClientID'],msg.FG['netip'],int(msg.FG['netport']), 121.36.21.219 171.221.238.16
